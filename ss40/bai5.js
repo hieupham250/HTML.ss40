@@ -1,7 +1,7 @@
 let usernameInput = document.getElementById("username");
 let passwordInput = document.getElementById("password");
 let emailInput = document.getElementById("email");
-let registrationForm = document.getElementById("form");
+let registrationForm = document.getElementById("registrationForm");
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
 function addUser() {
@@ -15,6 +15,7 @@ function addUser() {
     registrationForm.reset();
     alert("Đăng ký thành công.");
 }
+
 registrationForm.addEventListener("submit", function (event) {
     event.preventDefault();
     addUser();
